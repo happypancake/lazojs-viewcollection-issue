@@ -1,0 +1,10 @@
+{
+
+    "routes": {
+        "":         { "component": "news", "layout": "member-layout" },
+        "hello(/)": { "component": "hello", "layout": "member-layout" }
+    },
+
+    "css": ["/app/client/base.css"],
+    "debug": true
+}

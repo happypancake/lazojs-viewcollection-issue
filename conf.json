@@ -1,0 +1,17 @@
+{
+    "directories": {
+        "application": "application",
+        "components": "components",
+        "models": "models"
+    },
+    "client": {},
+    "requirejs": {
+        "shim": {
+            "handlebars": {
+                "exports": "Handlebars"
+            }
+        },
+        "paths": {}
+    },
+    "libPath": "/lib/optimized/lib.js"
+}
