@@ -1,8 +1,7 @@
 {
 
     "routes": {
-        "":         { "component": "news", "layout": "member-layout" },
-        "hello(/)": { "component": "hello", "layout": "member-layout" }
+        "":         { "component": "hello" }
     },
 
     "css": ["/app/client/base.css"],
