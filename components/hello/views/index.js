@@ -3,7 +3,7 @@ define(['lazoView'], function (View) {
     'use strict';
 
     return View.extend({
-      
+
       events: {
           'click #get': 'getClicked',
           'click #post': 'postClicked'
@@ -19,19 +19,23 @@ define(['lazoView'], function (View) {
       },
       send: function (method) {
         var self = this;
-        
-   
-       
+
+
+
         $.ajax({
                 type: method,
-                data:{username:"name", password:"pass"},
+                data:{
+                  username: "name",
+                  password: "pass",
+                  crumb: this.ctl.ctx.getCookie('crumb')
+                },
                 dataType: 'json',
-                // resolves to 'components/login/server/utilActions.js:login'               
+                // resolves to 'components/login/server/utilActions.js:login'
                 url: '/fn/login/login',
                 success: function (resp) {
-                 
+
                   self.$('#result').text(resp)
-                  
+
                 }
             });
 
